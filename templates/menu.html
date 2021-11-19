@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Welcome to Pong!</h1>
+    <h3>User 1: W, S  |  User 2: Up, Down</h3>
+    <h3>Choose Speed</h3>
+    <form action="{{ url_for('play') }}" method="post">
+      <input type="radio" name="speed" value="1.0" checked = true> x1.0 <br>
+      <input type="radio" name="speed" value="1.5"> x1.5 <br>
+      <input type="radio" name="speed" value="2.0"> x2.0 <br> <br>
+      <input type="submit" value="Play">
+    </form>
+  </body>
+</html>
